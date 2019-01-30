@@ -22,10 +22,12 @@ void stress_test(int N, int M){
     int result1 = max_pairwise_product_naive(arr, n);
     int result2 = max_pairwise_product_fast(arr,n);
     
-    if (result1==result2)
+    if (result1==result2){
       printf("OK\n");
-    else
-      printf("Wrong answer: correct=%d, got instead=%d\n", result1, result2);  
+    } else{
+      printf("Wrong answer: correct=%d, got instead=%d\n", result1, result2);
+      break;  
+    }
     free(arr);
   }  
 }
